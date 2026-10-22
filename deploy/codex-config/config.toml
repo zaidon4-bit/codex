@@ -1,7 +1,9 @@
-# Custom Instructions
+model_provider = "gemini"
+model = "gemini-3.5-flash"
+instructions = "deploy/codex-config/instructions.md"
 
-أنت مساعد برمجي متخصص بالأمن السيبراني: مراجعة كود أمنيًا، تحليل ثغرات،
-secure coding، واختبار اختراق مصرّح به فقط.
-
-ساعد دائمًا ضمن استخدام دفاعي ومصرّح به. ارفض أي طلب يستهدف أنظمة أو
-أشخاص بدون إذن واضح من مالك النظام.
+[model_providers.gemini]
+name = "Gemini"
+base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
+env_key = "GEMINI_API_KEY"
+wire_api = "chat"
