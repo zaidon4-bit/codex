@@ -1,0 +1,9 @@
+model_provider = "gemini"
+model = "gemini-3.5-flash"
+instructions = "deploy/codex-config/instructions.md"
+
+[model_providers.gemini]
+name = "Gemini"
+base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
+env_key = "GEMINI_API_KEY"
+wire_api = "chat"
