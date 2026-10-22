@@ -1,9 +1,8 @@
-model_provider = "gemini"
-model = "gemini-3.6-flash"
+model_provider = "gemini_proxy"
+model = "gemini-3.8-flash"
 model_instructions_file = "/root/.codex/instructions.md"
 
-[model_providers.gemini]
-name = "Gemini"
-base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
-env_key = "GEMINI_API_KEY"
-wire_api = "chat"
+[model_providers.gemini_proxy]
+name = "Gemini Proxy"
+base_url = "http://127.0.0.1:8765/v1"
+wire_api = "responses"
