@@ -1,5 +1,5 @@
 FROM node:20-bullseye
-RUN npm install -g @openai/codex
+RUN npm install -g "@openai/codex@<0.122.0"
 WORKDIR /app
 COPY deploy/package.json .
 RUN npm install
